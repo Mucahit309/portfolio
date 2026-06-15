@@ -2,8 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.scss',
+  styleUrls: ['./navbar.scss']
 })
-export class Navbar {}
+export class Navbar {
+  isGerman = false;
+  activeLink = '';
+
+  toggleLanguage() {
+    this.isGerman = !this.isGerman;
+  }
+
+  setActive(link: string) {
+    this.activeLink = link;
+  }
+}
