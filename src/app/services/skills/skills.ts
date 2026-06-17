@@ -25,8 +25,12 @@ export class SkillsService {
     { name: 'Git', icon: 'assets/skills/git.svg' },
     { name: 'REST-API', icon: 'assets/skills/api.svg' },
     { name: 'Scrum', icon: 'assets/skills/scrum.svg' },
+    { name: 'Jira', icon: 'assets/skills/jira.svg' },
     { name: 'SQL', icon: 'assets/skills/sql.svg' },
     { name: 'Docker', icon: 'assets/skills/docker.svg' },
+    { name: 'Python', icon: 'assets/skills/python.svg' },
+    { name: 'Linux', icon: 'assets/skills/linux.svg' },
+    { name: 'Virtual machines', icon: 'assets/skills/vm.svg' },
     { 
       name: 'Growth mindset', 
       icon: 'assets/skills/growth.svg',
