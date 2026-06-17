@@ -1,1 +1,51 @@
-<p>skills works!</p>
+<section id="skills" class="skills-section">
+  <div class="skills-container">
+    
+    <div class="skills-content">
+      <span class="section-subtitle">Technologies</span>
+      <div class="skills-text-box">
+        <h2 class="section-title">Skill Set</h2>
+        
+        <p class="skills-description">
+          I am a dedicated Fullstack Developer passionate about writing clean, efficient code and building robust, end-to-end web applications. My focus lies in architecting scalable logic and crafting seamless interfaces that bridge the gap between complex back-end systems and intuitive user experiences. I constantly strive to master new programming paradigms, embrace complex architectural challenges, and stay at the forefront of the rapidly evolving development landscape.
+        </p>
+
+        <div class="skills-cta">
+          <h3>You need <span class="highlight">another skill?</span></h3>
+          <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+          
+          <a href="#contact" class="btn-outline">
+            <span class="btn-text">Let's Talk</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-grid">
+      @for (skill of skillsList; track skill.name) {
+        <div class="skill-item" [class.has-tooltip]="skill.tooltipItems">
+          
+          @if (skill.tooltipItems) {
+            <div class="tooltip-bubble">
+              @if (skill.tooltipTitle) {
+                <span class="tooltip-title">{{ skill.tooltipTitle }}</span>
+              }
+              <div class="tooltip-items-container">
+                @for (item of skill.tooltipItems; track item.name) {
+                  <div class="tooltip-item-block">
+                    <img [src]="item.icon" [alt]="item.name">
+                    <span class="tooltip-item-name">{{ item.name }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          }
+
+          <img [src]="skill.icon" [alt]="skill.name" class="main-icon">
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
