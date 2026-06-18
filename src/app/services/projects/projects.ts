@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface Project {
   title: string;
   technologies: string[];
+  image: string;
 }
 
 @Injectable({
@@ -12,11 +13,13 @@ export class ProjectsService {
   private projects: Project[] = [
     {
       title: 'Join',
-      technologies: ['HTML', 'CSS', 'JavaScript']
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: 'assets/projects/join.png'
     },
     {
       title: 'El Pollo Loco',
-      technologies: ['HTML', 'CSS', 'JavaScript']
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      image: 'assets/projects/polloloco.png'
     }
   ];
 

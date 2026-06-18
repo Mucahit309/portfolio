@@ -1,7 +1,6 @@
 <section id="projects" class="projects-section">
   <div class="projects-container">
     <div class="projects-content-wrapper">
-      
       <div class="projects-header-main">
         <span class="section-subtitle">Portfolio</span>
         <h2 class="section-title">Featured Projects</h2>
@@ -13,8 +12,10 @@
       <div class="projects-list">
         @for (project of projectsList; track project.title) {
           <div class="project-item">
-            
-            <h3 class="project-title">{{ project.title }}</h3>
+            <h3 class="project-title">
+              {{ project.title }}
+              <img src="assets/projects/arrow_outward.svg" class="project-arrow" alt="View Project">
+            </h3>
             
             <div class="project-tech">
               @for (tech of project.technologies; track tech; let last = $last) {
@@ -23,10 +24,12 @@
               }
             </div>
 
+            <div class="project-preview">
+              <img [src]="project.image" class="preview-img" [alt]="project.title">
+            </div>
           </div>
         }
       </div>
-
     </div>
   </div>
 </section>
