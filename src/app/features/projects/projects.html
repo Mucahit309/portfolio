@@ -1,1 +1,32 @@
-<p>projects works!</p>
+<section id="projects" class="projects-section">
+  <div class="projects-container">
+    <div class="projects-content-wrapper">
+      
+      <div class="projects-header-main">
+        <span class="section-subtitle">Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="projects-intro">
+          Explore a selection of my work, showcasing my skills in building robust, interactive, and user-friendly web applications.
+        </p>
+      </div>
+
+      <div class="projects-list">
+        @for (project of projectsList; track project.title) {
+          <div class="project-item">
+            
+            <h3 class="project-title">{{ project.title }}</h3>
+            
+            <div class="project-tech">
+              @for (tech of project.technologies; track tech; let last = $last) {
+                <span class="tech-text">{{ tech }}</span>
+                @if (!last) { <span class="tech-separator"> | </span> }
+              }
+            </div>
+
+          </div>
+        }
+      </div>
+
+    </div>
+  </div>
+</section>
