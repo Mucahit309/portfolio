@@ -1,9 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TestimonialsService } from '../../services/testimonials/testimonials';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [],
+  standalone: true,
   templateUrl: './testimonials.html',
-  styleUrl: './testimonials.scss',
+  styleUrls: ['./testimonials.scss']
 })
-export class Testimonials {}
+export class Testimonials {
+  testimonialsService = inject(TestimonialsService);
+  testimonials = this.testimonialsService.getTestimonials();
+  
+  currentIndex = 0;
+
+  get prevIndex() {
+    return this.currentIndex === 0 ? this.testimonials.length - 1 : this.currentIndex - 1;
+  }
+
+  get nextIndex() {
+    return this.currentIndex === this.testimonials.length - 1 ? 0 : this.currentIndex + 1;
+  }
+
+  next() {
+    this.currentIndex = this.nextIndex;
+  }
+
+  prev() {
+    this.currentIndex = this.prevIndex;
+  }
+
+  goTo(index: number) {
+    this.currentIndex = index;
+  }
+
+  handleCardClick(index: number) {
+    if (index === this.prevIndex) {
+      this.prev();
+    } else if (index === this.nextIndex) {
+      this.next();
+    }
+  }
+}
