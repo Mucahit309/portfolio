@@ -1,9 +1,8 @@
 .projects-section {
-  padding: 100px 40px;
+  padding: 80px 40px;
   display: flex;
   justify-content: center;
   background-color: transparent;
-  min-height: 75vh;
 }
 
 .projects-container {
@@ -139,10 +138,10 @@
   transition: all 0.3s ease;
   pointer-events: none;
   width: 350px;
-  height: 200px;
+  height: 250px;
   background-image: url('/assets/projects/background.svg');
   background-repeat: no-repeat;
-  background-position: bottom -15px right 15px;
+  background-position: bottom 20px right 25px;
   background-size: 85%;
 
   .preview-img {
@@ -151,8 +150,8 @@
     width: 300px;
     height: auto;
     object-fit: contain;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 25px;
+    margin-bottom: 25px;
   }
 }
 
