@@ -10,8 +10,8 @@
       </div>
 
       <div class="projects-list">
-        @for (project of projectsList; track project.title) {
-          <div class="project-item">
+        @for (project of projectsList; track project.title; let i = $index) {
+          <div class="project-item" (click)="openDialog(i)">
             <h3 class="project-title">
               {{ project.title }}
               <img src="assets/projects/arrow_outward.svg" class="project-arrow" alt="View Project">
@@ -33,3 +33,59 @@
     </div>
   </div>
 </section>
+
+<dialog #projectDialog class="project-dialog" (click)="onDialogClick($event)">
+  @if (selectedProject) {
+    <div class="dialog-content-wrapper">
+      <button class="dialog-close-btn" (click)="closeDialog()">
+        <img src="assets/projects/close_small.svg" class="close-default" alt="Close">
+        <img src="assets/projects/close_hover.svg" class="close-hover" alt="Close">
+      </button>
+
+      <div class="dialog-grid">
+        <div class="dialog-left">
+          <span class="dialog-number">{{ selectedProject.id }}</span>
+          <h2 class="dialog-title">{{ selectedProject.title }}</h2>
+          
+          <h4 class="dialog-subtitle">What is this project about?</h4>
+          <p class="dialog-description">{{ selectedProject.description }}</p>
+          
+          <div class="dialog-tech-icons">
+            @for (tech of selectedProject.techIcons; track tech.name) {
+              <div class="tech-item-wrapper">
+                <img [src]="tech.icon" [alt]="tech.name">
+                <span>{{ tech.name }}</span>
+              </div>
+            }
+          </div>
+
+          <div class="dialog-links">
+            @if (selectedProject.githubUrl) {
+              <a [href]="selectedProject.githubUrl" target="_blank" class="dialog-link-btn">
+                <span>Github</span>
+                <img src="assets/projects/arrow_outward_g.svg" alt="Github" class="link-arrow">
+              </a>
+            }
+            @if (selectedProject.liveUrl) {
+              <a [href]="selectedProject.liveUrl" target="_blank" class="dialog-link-btn">
+                <span>Live Test</span>
+                <img src="assets/projects/arrow_outward_g.svg" alt="Live Test" class="link-arrow">
+              </a>
+            }
+          </div>
+        </div>
+
+        <div class="dialog-right">
+          <img [src]="selectedProject.image" class="dialog-main-image" [alt]="selectedProject.title">
+          
+          <div class="dialog-footer">
+            <button class="next-project-btn" (click)="nextProject()">
+              <span>Next project</span>
+              <img src="assets/projects/arrow_forward.svg" alt="Next">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</dialog>
