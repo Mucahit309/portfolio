@@ -57,8 +57,8 @@
               <img src="assets/buttons/checked-hover.svg" class="chk-chk-hover" alt="Hover Checked">
             </span>
             <span class="checkbox-text">
-              I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
-            </span>
+              I've read the <a routerLink="/privacy-policy" class="privacy-link" target="_blank" (click)="$event.stopPropagation()">Privacy Policy</a> and agree to the processing of my data as outlined.
+            </span> 
           </label>
           @if (contactForm.get('privacyPolicy')?.invalid && contactForm.get('privacyPolicy')?.touched) {
             <div class="error-message error-message-checkbox">Please accept the privacy policy</div>
