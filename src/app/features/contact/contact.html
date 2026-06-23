@@ -1,1 +1,81 @@
-<p>contact works!</p>
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-left">
+      <span class="section-subtitle">Contact me</span>
+      <h2 class="section-title">Let's work together</h2>
+      <h3 class="contact-subtitle">Got a problem to solve?</h3>
+      <p class="contact-desc">
+        Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.
+      </p>
+      <p class="contact-desc mt-4">
+        Need a Fullstack developer? <strong>Lets talk!</strong>
+      </p>
+    </div>
+
+    <div class="contact-right">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+        
+        <div class="form-fields-container">
+          <div class="form-group" [class.has-error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+            <label for="name">What's your name?</label>
+            <div class="input-wrapper">
+              <input type="text" id="name" formControlName="name" placeholder="Your name goes here">
+            </div>
+            @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+              <span class="error-message">Your name is required</span>
+            }
+          </div>
+
+          <div class="form-group" [class.has-error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+            <label for="email">What's your email?</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" formControlName="email" placeholder="youremail@email.com">
+            </div>
+            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+              <span class="error-message">Your email is required</span>
+            }
+          </div>
+          
+          <div class="form-group" [class.has-error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+            <label for="message">How can I help you?</label>
+            <div class="input-wrapper">
+              <textarea id="message" formControlName="message" placeholder="Hello Mücahit, I am interested in..."></textarea>
+            </div>
+            @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+              <span class="error-message">Your message is empty</span>
+            }
+          </div>
+        </div>
+
+        <div class="checkbox-group" [class.has-error]="contactForm.get('privacyPolicy')?.invalid && contactForm.get('privacyPolicy')?.touched">
+          <label class="custom-checkbox">
+            <input type="checkbox" formControlName="privacyPolicy">
+            <span class="checkmark">
+              <img src="assets/buttons/default.svg" class="chk-default" alt="Unchecked">
+              <img src="assets/buttons/default-hover.svg" class="chk-def-hover" alt="Hover Unchecked">
+              <img src="assets/buttons/checked.svg" class="chk-checked" alt="Checked">
+              <img src="assets/buttons/checked-hover.svg" class="chk-chk-hover" alt="Hover Checked">
+            </span>
+            <span class="checkbox-text">
+              I've read the <a href="#" class="privacy-link">privacy policy</a> and agree to the processing of my data as outlined.
+            </span>
+          </label>
+          @if (contactForm.get('privacyPolicy')?.invalid && contactForm.get('privacyPolicy')?.touched) {
+            <div class="error-message error-message-checkbox">Please accept the privacy policy</div>
+          }
+        </div>
+
+        <button type="submit" class="submit-btn" [disabled]="contactForm.invalid || isSubmitting" [class.active]="contactForm.valid">
+          {{ isSubmitting ? 'Sending...' : 'Say hello ;)' }}
+        </button>
+
+        @if (submitSuccess) {
+          <p class="success-message">Thank you! Your message has been sent.</p>
+        }
+        @if (submitError) {
+          <p class="error-message-submit">Oops! There was a problem sending your message.</p>
+        }
+      </form>
+    </div>
+  </div>
+</section>
