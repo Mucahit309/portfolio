@@ -23,7 +23,7 @@ export class ProjectsService {
       image: 'assets/projects/join2.png',
       description: 'A task management system based on the Kanban board. Create and organize tasks using drag and drop functions, assign users and categories.',
       githubUrl: 'https://github.com/mucahit309',
-      liveUrl: '#',
+      liveUrl: 'https://github.com/Mucahit309',
       techIcons: [
         { icon: 'assets/projects/angular.svg', name: 'Angular' },
         { icon: 'assets/projects/typescript.svg', name: 'TypeScript' },
@@ -39,7 +39,7 @@ export class ProjectsService {
       image: 'assets/projects/polloloco2.png',
       description: 'A jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       githubUrl: 'https://github.com/mucahit309',
-      liveUrl: '#',
+      liveUrl: 'https://github.com/Mucahit309',
       techIcons: [
         { icon: 'assets/projects/js.svg', name: 'JavaScript' },
         { icon: 'assets/projects/html.svg', name: 'HTML' },
