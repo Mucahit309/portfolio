@@ -1,6 +1,6 @@
 <section id="testimonials" class="testimonials-section">
   <div class="testimonials-container">
-    <h2 class="section-title">What my colleagues say about me</h2>
+    <h2 class="section-title">{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
 
     <div class="carousel-wrapper">
       <div class="carousel-track">
@@ -15,16 +15,15 @@
                [class.next]="i === nextIndex"
                (click)="handleCardClick(i)">
             
-            <p class="quote-text">{{ item.text }}</p>
+            <p class="quote-text">{{ item.textKey | translate }}</p>
             
             <div class="author-section">
               <div class="divider"></div>
               <div class="author-info">
-                <h4 class="author">{{ item.author }}</h4>
-                <span class="role">{{ item.role }}</span>
+                <h4 class="author">{{ item.authorKey | translate }}</h4>
+                <span class="role">{{ item.roleKey | translate }}</span>
               </div>
             </div>
-            
           </div>
         }
       </div>

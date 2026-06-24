@@ -6,13 +6,13 @@
     </button>
     <ul class="nav-links">
       <li>
-        <a href="#about" [class.active]="activeLink === 'about'" (click)="setActive('about')" class="nav-link">About me</a>
+        <a href="#about" [class.active]="activeLink === 'about'" (click)="setActive('about')" class="nav-link">{{ 'NAVBAR.ABOUT' | translate }}</a>
       </li>
       <li>
-        <a href="#skills" [class.active]="activeLink === 'skills'" (click)="setActive('skills')" class="nav-link">Skills</a>
+        <a href="#skills" [class.active]="activeLink === 'skills'" (click)="setActive('skills')" class="nav-link">{{ 'NAVBAR.SKILLS' | translate }}</a>
       </li>
       <li>
-        <a href="#projects" [class.active]="activeLink === 'projects'" (click)="setActive('projects')" class="nav-link">Projects</a>
+        <a href="#projects" [class.active]="activeLink === 'projects'" (click)="setActive('projects')" class="nav-link">{{ 'NAVBAR.PROJECTS' | translate }}</a>
       </li>
     </ul>
   </div>

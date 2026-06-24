@@ -2,20 +2,20 @@
   <div class="skills-container">
     
     <div class="skills-content">
-      <span class="section-subtitle">Technologies</span>
+      <span class="section-subtitle">{{ 'SKILLS.SUBTITLE' | translate }}</span>
       <div class="skills-text-box">
-        <h2 class="section-title">Skill Set</h2>
+        <h2 class="section-title">{{ 'SKILLS.TITLE' | translate }}</h2>
         
         <p class="skills-description">
-          I am a dedicated Fullstack Developer passionate about writing clean, efficient code and building robust, end-to-end web applications. My focus lies in architecting scalable logic and crafting seamless interfaces that bridge the gap between complex back-end systems and intuitive user experiences. I constantly strive to master new programming paradigms, embrace complex architectural challenges, and stay at the forefront of the rapidly evolving development landscape.
+          {{ 'SKILLS.DESCRIPTION' | translate }}
         </p>
 
         <div class="skills-cta">
-          <h3>You need <span class="highlight">another skill?</span></h3>
-          <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+          <h3>{{ 'SKILLS.CTA.TITLE_1' | translate }} <span class="highlight">{{ 'SKILLS.CTA.TITLE_2' | translate }}</span></h3>
+          <p>{{ 'SKILLS.CTA.TEXT' | translate }}</p>
           
           <a href="#contact" class="btn-outline">
-            <span class="btn-text">Let's Talk</span>
+            <span class="btn-text">{{ 'SKILLS.CTA.BTN' | translate }}</span>
           </a>
         </div>
       </div>
@@ -28,21 +28,21 @@
           @if (skill.tooltipItems) {
             <div class="tooltip-bubble">
               @if (skill.tooltipTitle) {
-                <span class="tooltip-title">{{ skill.tooltipTitle }}</span>
+                <span class="tooltip-title">{{ skill.tooltipTitle | translate }}</span>
               }
               <div class="tooltip-items-container">
                 @for (item of skill.tooltipItems; track item.name) {
                   <div class="tooltip-item-block">
                     <img [src]="item.icon" [alt]="item.name">
-                    <span class="tooltip-item-name">{{ item.name }}</span>
+                    <span class="tooltip-item-name">{{ item.name | translate }}</span>
                   </div>
                 }
               </div>
             </div>
           }
 
-          <img [src]="skill.icon" [alt]="skill.name" class="main-icon">
-          <span class="skill-name">{{ skill.name }}</span>
+          <img [src]="skill.icon" [alt]="skill.name | translate" class="main-icon">
+          <span class="skill-name">{{ skill.name | translate }}</span>
         </div>
       }
     </div>

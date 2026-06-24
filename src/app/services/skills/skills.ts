@@ -17,27 +17,27 @@ export interface Skill {
 })
 export class SkillsService {
   private skills: Skill[] = [
-    { name: 'HTML', icon: 'assets/skills/html.svg' },
-    { name: 'CSS', icon: 'assets/skills/css.svg' },
-    { name: 'JavaScript', icon: 'assets/skills/javascript.svg' },
-    { name: 'TypeScript', icon: 'assets/skills/typescript.svg' },
-    { name: 'Angular', icon: 'assets/skills/angular.svg' },
-    { name: 'Git', icon: 'assets/skills/git.svg' },
-    { name: 'REST-API', icon: 'assets/skills/api.svg' },
-    { name: 'Scrum', icon: 'assets/skills/scrum.svg' },
-    { name: 'Jira', icon: 'assets/skills/jira.svg' },
-    { name: 'SQL', icon: 'assets/skills/sql.svg' },
-    { name: 'Docker', icon: 'assets/skills/docker.svg' },
-    { name: 'Python', icon: 'assets/skills/python.svg' },
-    { name: 'Linux', icon: 'assets/skills/linux.svg' },
-    { name: 'Virtual machines', icon: 'assets/skills/vm.svg' },
+    { name: 'SKILLS.LIST.HTML', icon: 'assets/skills/html.svg' },
+    { name: 'SKILLS.LIST.CSS', icon: 'assets/skills/css.svg' },
+    { name: 'SKILLS.LIST.JS', icon: 'assets/skills/javascript.svg' },
+    { name: 'SKILLS.LIST.TS', icon: 'assets/skills/typescript.svg' },
+    { name: 'SKILLS.LIST.ANGULAR', icon: 'assets/skills/angular.svg' },
+    { name: 'SKILLS.LIST.GIT', icon: 'assets/skills/git.svg' },
+    { name: 'SKILLS.LIST.API', icon: 'assets/skills/api.svg' },
+    { name: 'SKILLS.LIST.SCRUM', icon: 'assets/skills/scrum.svg' },
+    { name: 'SKILLS.LIST.JIRA', icon: 'assets/skills/jira.svg' },
+    { name: 'SKILLS.LIST.SQL', icon: 'assets/skills/sql.svg' },
+    { name: 'SKILLS.LIST.DOCKER', icon: 'assets/skills/docker.svg' },
+    { name: 'SKILLS.LIST.PYTHON', icon: 'assets/skills/python.svg' },
+    { name: 'SKILLS.LIST.LINUX', icon: 'assets/skills/linux.svg' },
+    { name: 'SKILLS.LIST.VM', icon: 'assets/skills/vm.svg' },
     { 
-      name: 'Growth mindset', 
+      name: 'SKILLS.LIST.GROWTH', 
       icon: 'assets/skills/growth.svg',
-      tooltipTitle: 'I have a special interest in learing',
+      tooltipTitle: 'SKILLS.TOOLTIP.TITLE',
       tooltipItems: [
-        { icon: 'assets/skills/react2.svg', name: 'React' },
-        { icon: 'assets/skills/vue2.svg', name: 'Vue.js' }
+        { icon: 'assets/skills/react2.svg', name: 'SKILLS.TOOLTIP.REACT' },
+        { icon: 'assets/skills/vue2.svg', name: 'SKILLS.TOOLTIP.VUE' }
       ]
     }
   ];

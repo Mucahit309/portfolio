@@ -1,9 +1,11 @@
 import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { ProjectsService, Project } from '../../services/projects/projects';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './projects.html',
   styleUrls: ['./projects.scss']
 })

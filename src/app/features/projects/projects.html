@@ -2,10 +2,10 @@
   <div class="projects-container">
     <div class="projects-content-wrapper">
       <div class="projects-header-main">
-        <span class="section-subtitle">Portfolio</span>
-        <h2 class="section-title">Featured Projects</h2>
+        <span class="section-subtitle">{{ 'PROJECTS.SUBTITLE' | translate }}</span>
+        <h2 class="section-title">{{ 'PROJECTS.TITLE' | translate }}</h2>
         <p class="projects-intro">
-          Explore a selection of my work, showcasing my skills in building robust, interactive, and user-friendly web applications.
+          {{ 'PROJECTS.INTRO' | translate }}
         </p>
       </div>
 
@@ -47,8 +47,8 @@
           <span class="dialog-number">{{ selectedProject.id }}</span>
           <h2 class="dialog-title">{{ selectedProject.title }}</h2>
           
-          <h4 class="dialog-subtitle">What is this project about?</h4>
-          <p class="dialog-description">{{ selectedProject.description }}</p>
+          <h4 class="dialog-subtitle">{{ 'PROJECTS.DIALOG.ABOUT' | translate }}</h4>
+          <p class="dialog-description">{{ selectedProject.descriptionKey | translate }}</p>
           
           <div class="dialog-tech-icons">
             @for (tech of selectedProject.techIcons; track tech.name) {
@@ -62,13 +62,13 @@
           <div class="dialog-links">
             @if (selectedProject.githubUrl) {
               <a [href]="selectedProject.githubUrl" target="_blank" class="dialog-link-btn">
-                <span>Github</span>
+                <span>{{ 'PROJECTS.DIALOG.GITHUB' | translate }}</span>
                 <img src="assets/projects/arrow_outward_g.svg" alt="Github" class="link-arrow">
               </a>
             }
             @if (selectedProject.liveUrl) {
               <a [href]="selectedProject.liveUrl" target="_blank" class="dialog-link-btn">
-                <span>Live Test</span>
+                <span>{{ 'PROJECTS.DIALOG.LIVE' | translate }}</span>
                 <img src="assets/projects/arrow_outward_g.svg" alt="Live Test" class="link-arrow">
               </a>
             }
@@ -80,7 +80,7 @@
           
           <div class="dialog-footer">
             <button class="next-project-btn" (click)="nextProject()">
-              <span>Next project</span>
+              <span>{{ 'PROJECTS.DIALOG.NEXT' | translate }}</span>
               <img src="assets/projects/arrow_forward.svg" alt="Next">
             </button>
           </div>

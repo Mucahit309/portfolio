@@ -1,9 +1,10 @@
 import { Component, HostListener } from '@angular/core';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss'
 })

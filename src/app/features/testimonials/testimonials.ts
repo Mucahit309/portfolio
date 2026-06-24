@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { TestimonialsService } from '../../services/testimonials/testimonials';
+import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
+  imports: [TranslatePipe],
   templateUrl: './testimonials.html',
   styleUrls: ['./testimonials.scss']
 })

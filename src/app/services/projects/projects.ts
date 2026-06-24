@@ -5,7 +5,7 @@ export interface Project {
   title: string;
   technologies: string[];
   image: string;
-  description: string;
+  descriptionKey: string;
   githubUrl: string;
   liveUrl: string;
   techIcons: { icon: string; name: string }[];
@@ -21,7 +21,7 @@ export class ProjectsService {
       title: 'Join',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: 'assets/projects/join2.png',
-      description: 'A task management system based on the Kanban board. Create and organize tasks using drag and drop functions, assign users and categories.',
+      descriptionKey: 'PROJECTS.JOIN.DESC',
       githubUrl: 'https://github.com/mucahit309',
       liveUrl: 'https://github.com/Mucahit309',
       techIcons: [
@@ -37,7 +37,7 @@ export class ProjectsService {
       title: 'El Pollo Loco',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: 'assets/projects/polloloco2.png',
-      description: 'A jump, run and throw game based on an object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      descriptionKey: 'PROJECTS.POLLO.DESC',
       githubUrl: 'https://github.com/mucahit309',
       liveUrl: 'https://github.com/Mucahit309',
       techIcons: [
