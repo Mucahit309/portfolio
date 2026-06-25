@@ -19,7 +19,7 @@ export class ProjectsService {
     {
       id: '01',
       title: 'Join',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       image: 'assets/projects/join2.png',
       descriptionKey: 'PROJECTS.JOIN.DESC',
       githubUrl: 'https://github.com/mucahit309',
