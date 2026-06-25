@@ -44,7 +44,11 @@
   margin: 0;
   letter-spacing: 1px;
   line-height: 1;
+  white-space: nowrap;
 }
+
+@media (max-width: 1200px) { .title { font-size: 4rem; } }
+@media (max-width: 768px) { .title { font-size: 2.5rem; } }
 
 .button-group {
   display: flex;
@@ -118,6 +122,9 @@
     color: var(--accent-green);
   }
 }
+
+.mail-text-desktop { display: block !important; }
+.mail-icon-mobile { display: none !important; }
 
 .social-icons {
   display: flex;
@@ -206,20 +213,9 @@
   animation: bounceY 1.5s infinite ease-in-out;
 }
 
-.line {
-  width: 1px;
-  border-radius: 2px;
-}
-
-.green-line {
-  background-color: var(--accent-green);
-  height: 180px;
-}
-
-.white-line {
-  background-color: var(--text-main);
-  height: 100px;
-}
+.line { width: 1px; border-radius: 2px; }
+.green-line { background-color: var(--accent-green); height: 180px; }
+.white-line { background-color: var(--text-main); height: 100px; }
 
 @keyframes bounceY {
   0%, 100% { transform: translateY(-4px); }
@@ -277,4 +273,9 @@
 @keyframes ticker-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .mail-text-desktop { display: none !important; }
+  .mail-icon-mobile { display: block !important; }
 }

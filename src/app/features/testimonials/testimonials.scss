@@ -215,3 +215,55 @@
     background-color: rgba(255, 255, 255, 0.6);
   }
 }
+
+@media (max-width: 1000px) {
+  .testimonial-card {
+    max-width: 500px;
+    padding: 30px 20px 30px 30px;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .author {
+    font-size: 1.2rem;
+  }
+
+  .role {
+    font-size: 0.95rem;
+  }
+
+  .static-quote {
+    left: calc(50% - 250px);
+
+    img {
+      width: 80px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    max-width: 90%;
+    padding: 20px 15px 20px 20px;
+  }
+
+  .quote-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .author {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 0.9rem;
+  }
+
+  .static-quote {
+    display: none;
+  }
+}

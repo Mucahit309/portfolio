@@ -243,3 +243,19 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .skills-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .skills-content {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
