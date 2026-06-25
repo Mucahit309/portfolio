@@ -287,4 +287,11 @@
 @media (max-width: 768px) {
   .mail-text-desktop { display: none !important; }
   .mail-icon-mobile { display: block !important; }
+  .hero-content { transform: translateY(-90px); }
+}
+
+@media (max-width: 480px) {
+  .hero-content { transform: translateY(-100px); }
+  .white-line { height: 60px; }
+  .green-line { height: 120px; }
 }

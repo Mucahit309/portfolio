@@ -7,8 +7,8 @@
 
   "HERO": {
     "SUBTITLE": "Fullstack Developer",
-    "BTN_WORK": "Meine Arbeit ansehen",
-    "BTN_CONTACT": "Kontaktiere mich",
+    "BTN_WORK": "Projekte",
+    "BTN_CONTACT": "Kontakt",
     "TICKER": {
       "REMOTE": "Verfügbar für Remote-Arbeit",
       "ROLE": "Fullstack Developer",
