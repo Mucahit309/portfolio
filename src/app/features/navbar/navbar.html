@@ -1,10 +1,21 @@
 <nav class="navbar">
-  <div class="left-section">
-    <button class="lang-btn" (click)="toggleLanguage()">
-      <img class="lang-default" [src]="isGerman ? 'assets/buttons/lang-ger.svg' : 'assets/buttons/lang-def.svg'" alt="Language">
-      <img class="lang-hover" [src]="isGerman ? 'assets/buttons/lang-ger-hover.svg' : 'assets/buttons/lang-hover.svg'" alt="Language">
-    </button>
-    <ul class="nav-links">
+  <a href="#hero" class="logo">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/logo/logo_e.png">
+      <img src="assets/logo/logo.png" class="logo-default" alt="Logo">
+    </picture>
+    <img src="assets/logo/logo-hover.png" class="logo-hover" alt="Logo">
+  </a>
+
+  <div class="right-section">
+    <div class="backdrop" *ngIf="isMenuOpen" (click)="toggleMenu()"></div>
+    <ul class="nav-links" [class.mobile-open]="isMenuOpen">
+      <li>
+        <button class="lang-btn" (click)="toggleLanguage()">
+          <img class="lang-default" [src]="isGerman ? 'assets/buttons/lang-ger.svg' : 'assets/buttons/lang-def.svg'" alt="Language">
+          <img class="lang-hover" [src]="isGerman ? 'assets/buttons/lang-ger-hover.svg' : 'assets/buttons/lang-hover.svg'" alt="Language">
+        </button>
+      </li>
       <li>
         <a href="#about" [class.active]="activeLink === 'about'" (click)="setActive('about')" class="nav-link">{{ 'NAVBAR.ABOUT' | translate }}</a>
       </li>
@@ -15,10 +26,11 @@
         <a href="#projects" [class.active]="activeLink === 'projects'" (click)="setActive('projects')" class="nav-link">{{ 'NAVBAR.PROJECTS' | translate }}</a>
       </li>
     </ul>
-  </div>
 
-  <a href="#" class="logo">
-    <img class="logo-default" src="assets/logo/logo.png" alt="Logo">
-    <img class="logo-hover" src="assets/logo/logo-hover.png" alt="Logo">
-  </a>
+    <button class="burger-btn" [class.open]="isMenuOpen" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>

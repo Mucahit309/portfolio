@@ -12,6 +12,7 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 export class Navbar {
   isGerman = false;
   activeLink = '';
+  isMenuOpen: boolean = false;
   
   private translate = inject(TranslateService);
 
@@ -30,5 +31,16 @@ export class Navbar {
 
   setActive(link: string) {
     this.activeLink = link;
+    this.isMenuOpen = false;
+    document.body.style.overflow = 'auto';
+  }
+  
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
   }
 }
