@@ -259,3 +259,9 @@
     gap: 2rem;
   }
 }
+
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 40px 20px;
+  }
+}

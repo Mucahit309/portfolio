@@ -43,6 +43,10 @@
       </button>
 
       <div class="dialog-grid">
+        <div class="dialog-right">
+          <img [src]="selectedProject.image" class="dialog-main-image" [alt]="selectedProject.title">
+        </div>
+
         <div class="dialog-left">
           <span class="dialog-number">{{ selectedProject.id }}</span>
           <h2 class="dialog-title">{{ selectedProject.title }}</h2>
@@ -75,15 +79,11 @@
           </div>
         </div>
 
-        <div class="dialog-right">
-          <img [src]="selectedProject.image" class="dialog-main-image" [alt]="selectedProject.title">
-          
-          <div class="dialog-footer">
-            <button class="next-project-btn" (click)="nextProject()">
-              <span>{{ 'PROJECTS.DIALOG.NEXT' | translate }}</span>
-              <img src="assets/projects/arrow_forward.svg" alt="Next">
-            </button>
-          </div>
+        <div class="dialog-footer">
+          <button class="next-project-btn" (click)="nextProject()">
+            <span>{{ 'PROJECTS.DIALOG.NEXT' | translate }}</span>
+            <img src="assets/projects/arrow_forward.svg" alt="Next">
+          </button>
         </div>
       </div>
     </div>

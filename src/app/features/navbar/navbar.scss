@@ -145,6 +145,13 @@
   transition: all 0.3s ease;
 }
 
+.burger-btn:hover span,
+.burger-btn:active span,
+.burger-btn.open span,
+.burger-btn.active span {
+  background-color: var(--accent-green);
+}
+
 @media (max-width: 768px) {
   .logo:hover {
     .logo-default { opacity: 1; }
@@ -153,6 +160,9 @@
 
   .logo {
     order: 1;
+    width: 120px;
+    height: 80px;
+    top: 5px;
   }
 
   .right-section {

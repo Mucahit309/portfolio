@@ -148,4 +148,18 @@
     align-items: center;
     text-align: center;
   }
+
+  .about-image-wrapper {
+  &:hover {
+    .about-image-bg {
+      transform: translate(-25px, 25px);
+    }
+  }
+}
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 40px 20px;
+  }
 }
