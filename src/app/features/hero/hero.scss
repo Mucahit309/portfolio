@@ -1,6 +1,6 @@
 .hero-section {
   position: relative;
-  height: 80vh;
+  height: calc(100vh - 120px);
   min-height: 600px;
   display: flex;
   justify-content: center;
@@ -46,18 +46,6 @@
   line-height: 1;
   white-space: nowrap;
 }
-
-@media (max-width: 1100px) { .title { font-size: 4rem; } }
-
-@media (max-width: 768px) { 
-  .title { font-size: 2.5rem;}
-
-    .hero-section {
-      height: 70vh;
-      min-height: 400px;
-      padding-top: 0rem;
-    }
-  } 
 
 .button-group {
   display: flex;
@@ -284,15 +272,49 @@
   100% { transform: translateX(-50%); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) { 
+  .title { font-size: 4rem; } 
+}
+
+@media (max-width: 768px) { 
+  .hero-section {
+    height: calc(100vh - 40px);
+    padding: 0px 20px;
+  }
+  .title { font-size: 3.2rem; }
   .mail-text-desktop { display: none !important; }
   .mail-icon-mobile { display: block !important; }
   .hero-content { transform: translateY(-90px); }
+  .btn-outline {padding: 0.7rem 1.5rem;}
 }
 
 @media (max-width: 480px) {
   .hero-content { transform: translateY(-100px); }
   .white-line { height: 60px; }
   .green-line { height: 120px; }
-  .title { font-size: 2rem; }
+  .title { font-size: 2.5rem; }
+}
+
+@media (max-width: 420px) {
+  .title {
+    white-space: normal;
+    max-width: min-content;
+    margin: 0 auto;
+    line-height: 1.1;
+    font-size: 3.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .btn-outline {
+    width: 40%;
+    min-width: max-content;
+  }
 }

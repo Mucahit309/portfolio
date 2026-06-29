@@ -138,3 +138,29 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 400px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 40px 0;
+  }
+
+  .footer-left, 
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo-link img {
+    object-position: center;
+  }
+
+  .footer-middle {
+    margin-top: 10px;
+    order: 3;
+    text-align: center;
+  }
+}
