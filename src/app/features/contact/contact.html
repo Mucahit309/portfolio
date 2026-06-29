@@ -57,7 +57,7 @@
               <img src="assets/buttons/checked-hover.svg" class="chk-chk-hover" alt="Hover Checked">
             </span>
             <span class="checkbox-text">
-              {{ 'CONTACT.FORM.PRIVACY_1' | translate }} <a routerLink="/privacy-policy" class="privacy-link" target="_blank" (click)="$event.stopPropagation()">{{ 'CONTACT.FORM.PRIVACY_LINK' | translate }}</a> {{ 'CONTACT.FORM.PRIVACY_2' | translate }}
+              {{ 'CONTACT.FORM.PRIVACY_1' | translate }} <a routerLink="/privacy-policy" class="privacy-link" (click)="$event.stopPropagation()">{{ 'CONTACT.FORM.PRIVACY_LINK' | translate }}</a> {{ 'CONTACT.FORM.PRIVACY_2' | translate }}
             </span> 
           </label>
           @if (contactForm.get('privacyPolicy')?.invalid && contactForm.get('privacyPolicy')?.touched) {
