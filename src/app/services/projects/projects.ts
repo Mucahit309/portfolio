@@ -38,8 +38,8 @@ export class ProjectsService {
       technologies: ['HTML', 'CSS', 'JavaScript'],
       image: 'assets/projects/polloloco2.png',
       descriptionKey: 'PROJECTS.POLLO.DESC',
-      githubUrl: 'https://github.com/mucahit309',
-      liveUrl: 'https://github.com/Mucahit309',
+      githubUrl: 'https://github.com/Mucahit309/el_pollo_loco',
+      liveUrl: 'https://projects.muecahit-kaldirim.com/el-pollo-loco/',
       techIcons: [
         { icon: 'assets/projects/js.svg', name: 'JavaScript' },
         { icon: 'assets/projects/html.svg', name: 'HTML' },
