@@ -73,8 +73,9 @@
 }
 
 .form-group {
+  position: relative;
   border-top: 1px solid var(--accent-green);
-  padding: 32px 20px;
+  padding: 32px 20px 35px 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -130,18 +131,28 @@
 }
 
 .error-message {
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
   color: #E84C3D;
   font-family: var(--font-primary);
   font-size: 0.95rem;
 }
 
-.error-message-checkbox {
-  margin-left: 35px;
-  margin-top: 5px;
+.checkbox-group {
+  position: relative;
+  margin-top: 10px;
+  padding-bottom: 25px;
 }
 
-.checkbox-group {
-  margin-top: 10px;
+.error-message-checkbox {
+  position: absolute;
+  bottom: 0;
+  left: 39px;
+  margin: 0;
+  color: #E84C3D;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
 }
 
 .custom-checkbox {
@@ -256,12 +267,12 @@
     }
 
     &:hover {
-        border-color: var(--accent-green);
+      border-color: var(--accent-green);
       color: transparent;
       
       &::after {
         position: absolute;
-        left: 15%;               
+        left: 15%;              
         animation: moveLeftRight 3s linear infinite;
       }
     }

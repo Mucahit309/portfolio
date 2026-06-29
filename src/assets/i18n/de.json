@@ -52,7 +52,7 @@
       "DOCKER": "Docker",
       "PYTHON": "Python",
       "LINUX": "Linux",
-      "VM": "Virtuelle Maschinen",
+      "VM": "VM's",
       "GROWTH": "Growth Mindset"
     },
     "TOOLTIP": {
@@ -64,7 +64,7 @@
 
   "PROJECTS": {
     "SUBTITLE": "Portfolio",
-    "TITLE": "Ausgewählte Projekte",
+    "TITLE": "Projekte",
     "INTRO": "Entdecke eine Auswahl meiner Arbeiten, die meine Fähigkeiten im Aufbau robuster, interaktiver und benutzerfreundlicher Webanwendungen zeigen.",
     "DIALOG": {
       "ABOUT": "Worum geht es bei diesem Projekt?",
