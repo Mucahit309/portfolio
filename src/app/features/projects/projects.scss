@@ -164,6 +164,12 @@
   outline: none !important;
   padding: 0;
   margin: auto;
+  overflow: hidden; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &::backdrop {
     background: rgba(0, 0, 0, 0.7);
