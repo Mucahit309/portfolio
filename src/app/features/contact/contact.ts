@@ -33,16 +33,6 @@ export class Contact {
 
       const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mrewgebb'; 
 
-      if (FORMSPREE_ENDPOINT === 'https://formspree.io/f/mrewgebb') {
-        setTimeout(() => {
-          this.isSubmitting = false;
-          this.submitSuccess = true;
-          this.contactForm.reset();
-          setTimeout(() => this.submitSuccess = false, 5000);
-        }, 1500);
-        return;
-      }
-
       try {
         const response = await fetch(FORMSPREE_ENDPOINT, {
           method: 'POST',
