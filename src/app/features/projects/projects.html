@@ -42,49 +42,50 @@
         <img src="assets/projects/close_hover.svg" class="close-hover" alt="Close">
       </button>
 
-      <div class="dialog-grid">
-        <div class="dialog-right">
-          <img [src]="selectedProject.image" class="dialog-main-image" [alt]="selectedProject.title">
-        </div>
-
-        <div class="dialog-left">
-          <span class="dialog-number">{{ selectedProject.id }}</span>
-          <h2 class="dialog-title">{{ selectedProject.title }}</h2>
-          
-          <h4 class="dialog-subtitle">{{ 'PROJECTS.DIALOG.ABOUT' | translate }}</h4>
-          <p class="dialog-description">{{ selectedProject.descriptionKey | translate }}</p>
-          
-          <div class="dialog-tech-icons">
-            @for (tech of selectedProject.techIcons; track tech.name) {
-              <div class="tech-item-wrapper">
-                <img [src]="tech.icon" [alt]="tech.name">
-                <span>{{ tech.name }}</span>
-              </div>
-            }
+      <div class="dialog-scrollable-content">
+        <div class="dialog-grid">
+          <div class="dialog-left">
+            <span class="dialog-number">{{ selectedProject.id }}</span>
+            <h2 class="dialog-title">{{ selectedProject.title }}</h2>
+            
+            <h4 class="dialog-subtitle">{{ 'PROJECTS.DIALOG.ABOUT' | translate }}</h4>
+            <p class="dialog-description">{{ selectedProject.descriptionKey | translate }}</p>
+            
+            <div class="dialog-tech-icons">
+              @for (tech of selectedProject.techIcons; track tech.name) {
+                <div class="tech-item-wrapper">
+                  <img [src]="tech.icon" [alt]="tech.name">
+                  <span>{{ tech.name }}</span>
+                </div>
+              }
+            </div>
           </div>
 
-          <div class="dialog-links">
-            @if (selectedProject.githubUrl) {
-              <a [href]="selectedProject.githubUrl" target="_blank" class="dialog-link-btn">
-                <span>{{ 'PROJECTS.DIALOG.GITHUB' | translate }}</span>
-                <img src="assets/projects/arrow_outward_g.svg" alt="Github" class="link-arrow">
-              </a>
-            }
-            @if (selectedProject.liveUrl) {
-              <a [href]="selectedProject.liveUrl" target="_blank" class="dialog-link-btn">
-                <span>{{ 'PROJECTS.DIALOG.LIVE' | translate }}</span>
-                <img src="assets/projects/arrow_outward_g.svg" alt="Live Test" class="link-arrow">
-              </a>
-            }
+          <div class="dialog-right">
+            <img [src]="selectedProject.image" class="dialog-main-image" [alt]="selectedProject.title">
           </div>
         </div>
+      </div>
 
-        <div class="dialog-footer">
-          <button class="next-project-btn" (click)="nextProject()">
-            <span>{{ 'PROJECTS.DIALOG.NEXT' | translate }}</span>
-            <img src="assets/projects/arrow_forward.svg" alt="Next">
-          </button>
+      <div class="dialog-fixed-footer">
+        <div class="dialog-links">
+          @if (selectedProject.githubUrl) {
+            <a [href]="selectedProject.githubUrl" target="_blank" class="dialog-link-btn">
+              <span>{{ 'PROJECTS.DIALOG.GITHUB' | translate }}</span>
+              <img src="assets/projects/arrow_outward_g.svg" alt="Github" class="link-arrow">
+            </a>
+          }
+          @if (selectedProject.liveUrl) {
+            <a [href]="selectedProject.liveUrl" target="_blank" class="dialog-link-btn">
+              <span>{{ 'PROJECTS.DIALOG.LIVE' | translate }}</span>
+              <img src="assets/projects/arrow_outward_g.svg" alt="Live Test" class="link-arrow">
+            </a>
+          }
         </div>
+        <button class="next-project-btn" (click)="nextProject()">
+          <span>{{ 'PROJECTS.DIALOG.NEXT' | translate }}</span>
+          <img src="assets/projects/arrow_forward.svg" alt="Next">
+        </button>
       </div>
     </div>
   }
